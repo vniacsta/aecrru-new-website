@@ -1,15 +1,18 @@
 import "./ContactsSection.css";
 import { AddressCardIcon } from "./icons";
 
-function ContactsSection({ contactItems }) {
+function ContactsSection({ contactItems, intro }) {
   return (
-    <section className="contacts section-reveal" id="contacts">
-      <h2>Contate-nos</h2>
-      <h3>
-        Estamos ao seu dispor de segunda a sexta-feira das 9h às 18h.
-        <br />
-        Aguardamos o seu contato atráves dos meios disponibilizados.
-      </h3>
+    <section className="contacts section-shell section-reveal">
+      <div className="section-heading">
+        <p className="section-label">Contactos</p>
+        <h2>Todos os pontos de contacto num bloco mais claro.</h2>
+        <div className="contacts__intro">
+          {Array.isArray(intro)
+            ? intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)
+            : <p>{intro}</p>}
+        </div>
+      </div>
 
       <article className="contacts-grid">
         <div className="contact-card">

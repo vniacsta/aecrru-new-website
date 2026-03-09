@@ -1,0 +1,144 @@
+.home-page__intro,
+.home-page__highlights,
+.home-page__featured-work {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.home-page__intro {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.5rem;
+}
+
+.home-page__statement,
+.home-page__metrics,
+.highlight-card,
+.featured-work-card {
+  box-shadow: var(--shadow-soft);
+}
+
+.home-page__statement {
+  padding: 1.5rem;
+  border-radius: 28px;
+  background: linear-gradient(150deg, #f7e4d8 0%, #fff8f3 100%);
+}
+
+.home-page__statement h2,
+.section-heading h2 {
+  margin: 0 0 1rem;
+  font-family: "Advent Pro", sans-serif;
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  line-height: 0.95;
+}
+
+.home-page__statement p {
+  margin: 0;
+  max-width: 58ch;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.section-label {
+  margin: 0 0 0.75rem;
+  color: var(--brand-orange);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.home-page__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.1rem;
+}
+
+.home-page__metrics {
+  display: grid;
+  gap: 1rem;
+  box-shadow: none;
+  background: transparent;
+}
+
+.metric-card {
+  padding: 1.2rem;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #111111 0%, #242424 100%);
+  color: var(--brand-white);
+}
+
+.metric-card strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: "Advent Pro", sans-serif;
+  font-size: 2.7rem;
+}
+
+.metric-card span {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.section-heading {
+  margin-bottom: 1.5rem;
+}
+
+.highlight-grid,
+.featured-work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.featured-work-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.highlight-card {
+  padding: 1.5rem;
+  border-radius: 24px;
+  background: var(--surface-strong);
+}
+
+.highlight-card h3,
+.featured-work-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.2rem;
+}
+
+.highlight-card p,
+.featured-work-card p {
+  margin: 0;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.featured-work-card {
+  overflow: hidden;
+  border-radius: 24px;
+  background: var(--brand-white);
+}
+
+.featured-work-card__image {
+  aspect-ratio: 1.2;
+  background-position: center;
+  background-size: cover;
+}
+
+.featured-work-card__body {
+  padding: 1.25rem;
+}
+
+@media (max-width: 960px) {
+  .home-page__intro,
+  .highlight-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-work-grid {
+    grid-template-columns: 1fr;
+  }
+}

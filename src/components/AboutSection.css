@@ -1,23 +1,13 @@
 .about {
-  width: 100%;
-  text-align: center;
-  background: var(--brand-white);
-  padding: 0 1.5rem 4rem;
-}
-
-.about h2 {
-  margin: 0;
-  padding: 10rem 0 2.5rem;
-  font-family: "Advent Pro", sans-serif;
-  font-size: clamp(2rem, 4vw, 3rem);
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 
 .two-column {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .text-card h4 {
@@ -26,13 +16,24 @@
   text-shadow: 0.5px 0.5px 1px var(--brand-grey);
 }
 
+.text-card {
+  padding: 1.75rem;
+  border-radius: 28px;
+  background: var(--surface-strong);
+  box-shadow: var(--shadow-soft);
+}
+
+.text-card__content {
+  display: grid;
+  gap: 1rem;
+}
+
 .text-card p {
   margin: 0;
-  padding: 0 0.5rem;
   text-align: left;
-  line-height: 1.7;
+  line-height: 1.8;
   font-size: 1rem;
-  font-weight: 300;
+  color: var(--text-muted);
 }
 
 .about-txt-brand,
@@ -52,8 +53,7 @@
 }
 
 @media (max-width: 600px) {
-  .about {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .text-card {
+    padding: 1.25rem;
   }
 }

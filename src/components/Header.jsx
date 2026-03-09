@@ -1,20 +1,26 @@
 import "./Header.css";
+import { NavLink } from "react-router-dom";
 import { FacebookIcon, InstagramIcon, MenuIcon } from "./icons";
 
-function Header({ menuOpen, onToggleMenu, onCloseMenu, navLinks }) {
+import { useState } from "react";
+
+function Header({ navLinks }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <header className="header">
       <nav className="navbar">
-        <a className="navbar-brand" href="#home" onClick={onCloseMenu}>
+        <NavLink className="navbar-brand" to="/" onClick={closeMenu}>
           <img src="/media/icon.png" height="40" alt="Logo AECRRU" />
-        </a>
+        </NavLink>
 
         <button
           type="button"
           className="navbar-toggle"
           aria-label="Toggle navigation"
           aria-expanded={menuOpen}
-          onClick={onToggleMenu}
+          onClick={() => setMenuOpen((current) => !current)}
         >
           <MenuIcon />
         </button>
@@ -22,10 +28,14 @@ function Header({ menuOpen, onToggleMenu, onCloseMenu, navLinks }) {
         <div className={`navbar-panel ${menuOpen ? "is-open" : ""}`}>
           <ul className="navbar-links">
             {navLinks.map((link) => (
-              <li key={link.href}>
-                <a href={link.href} onClick={onCloseMenu}>
+              <li key={link.to}>
+                <NavLink
+                  to={link.to}
+                  onClick={closeMenu}
+                  className={({ isActive }) => (isActive ? "is-active" : "")}
+                >
                   {link.label}
-                </a>
+                </NavLink>
               </li>
             ))}
           </ul>

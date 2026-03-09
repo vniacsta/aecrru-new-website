@@ -1,0 +1,27 @@
+.not-found-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+  background: radial-gradient(circle at top, #fff1e8 0%, #f5f3f0 55%, #ece8e2 100%);
+}
+
+.not-found-page__card {
+  max-width: 620px;
+  padding: 2rem;
+  border-radius: 28px;
+  background: var(--brand-white);
+  box-shadow: var(--shadow-soft);
+}
+
+.not-found-page__card h1 {
+  margin: 0 0 0.75rem;
+  font-family: "Advent Pro", sans-serif;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+}
+
+.not-found-page__card p:last-of-type {
+  margin-bottom: 1.5rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}

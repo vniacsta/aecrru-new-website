@@ -1,0 +1,82 @@
+.page-intro {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: stretch;
+  padding: 8.5rem 1.5rem 2rem;
+}
+
+.page-intro__content,
+.page-intro__media {
+  border-radius: 28px;
+}
+
+.page-intro__content {
+  padding: 2rem;
+  background: linear-gradient(145deg, #111111 0%, #2f2f2f 100%);
+  color: var(--brand-white);
+  box-shadow: var(--shadow-soft);
+}
+
+.page-intro__eyebrow {
+  margin: 0 0 0.75rem;
+  color: #ffb18d;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.page-intro h1 {
+  margin: 0 0 1rem;
+  font-family: "Advent Pro", sans-serif;
+  font-size: clamp(2.3rem, 5vw, 4.5rem);
+  line-height: 0.95;
+}
+
+.page-intro__text {
+  max-width: 50ch;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.page-intro__text p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.page-intro__text p + p {
+  margin-top: 0.85rem;
+}
+
+.page-intro__media {
+  min-height: 320px;
+  background-position: center;
+  background-size: cover;
+  box-shadow: var(--shadow-soft);
+}
+
+.page-intro--center {
+  grid-template-columns: 1fr;
+}
+
+.page-intro--center .page-intro__text {
+  max-width: 64ch;
+}
+
+@media (max-width: 900px) {
+  .page-intro {
+    grid-template-columns: 1fr;
+    padding-top: 7.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-intro {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .page-intro__content {
+    padding: 1.5rem;
+  }
+}

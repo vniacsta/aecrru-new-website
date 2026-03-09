@@ -7,12 +7,16 @@
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 1rem;
-  padding: 0.8rem 1.1rem;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
+  margin: 0;
+  width: 100%;
+  padding: 0.9rem 1.1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(17, 17, 17, 0.7);
+  backdrop-filter: blur(18px);
   font-family: "Advent Pro", sans-serif;
+  box-shadow: 0 24px 40px rgba(0, 0, 0, 0.15);
 }
 
 .navbar-brand img {
@@ -37,6 +41,8 @@
   display: flex;
   align-items: center;
   gap: 2rem;
+  margin-left: 1rem;
+  flex: 1;
 }
 
 .navbar-links {
@@ -55,6 +61,10 @@
   transition: color 200ms ease-in-out;
 }
 
+.navbar-links a.is-active {
+  color: #ffb18d;
+}
+
 .navbar-links a:hover,
 .nav-social:hover {
   color: var(--brand-grey);
@@ -64,6 +74,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-left: auto;
 }
 
 @media (max-width: 768px) {
@@ -78,6 +89,7 @@
   .navbar-panel {
     display: none;
     width: 100%;
+    flex: initial;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
@@ -91,5 +103,11 @@
   .navbar-links {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .social-media {
+    width: 100%;
+    justify-content: flex-end;
+    margin-left: 0;
   }
 }

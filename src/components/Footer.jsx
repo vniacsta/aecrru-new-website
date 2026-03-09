@@ -3,11 +3,13 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer className="footer">
-      © 2020 · AECRRU | Agostinho Emanuel Construção, Remodelação,
-      Reabilitação, Unip. Lda. · Designed and coded by{" "}
-      <a href="http://vniacsta.netlify.app/" target="_blank" rel="noreferrer">
-        VniaCsta
-      </a>
+      <div className="footer__content">
+        <div className="footer__brand">
+          <strong>AECRRU - Agostinho Emanuel</strong>
+          <p>Construção, Remodelação e Reabilitação</p>
+        </div>
+        <span className="footer__meta">© March 2026</span>
+      </div>
     </footer>
   );
 }

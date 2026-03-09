@@ -6,10 +6,31 @@ import {
 } from "../components/icons";
 
 export const navLinks = [
-  { href: "#home", label: "Início" },
-  { href: "#about", label: "Quem Somos" },
-  { href: "#work", label: "Áreas de Intervenção" },
-  { href: "#contacts", label: "Contatos" },
+  { to: "/", label: "Início" },
+  { to: "/quem-somos", label: "Quem Somos" },
+  { to: "/areas-de-intervencao", label: "Áreas de Intervenção" },
+  { to: "/contactos", label: "Contactos" },
+];
+
+export const homeHighlights = [
+  {
+    title: "Construção",
+    text: "Execução de edifícios comerciais, industriais e residenciais com foco em rigor, prazo e qualidade.",
+  },
+  {
+    title: "Remodelação",
+    text: "Intervenções orientadas para valorização, funcionalidade e atualização dos espaços.",
+  },
+  {
+    title: "Reabilitação",
+    text: "Soluções de recuperação e adaptação para edifícios públicos, privados e património construído.",
+  },
+];
+
+export const companyMetrics = [
+  { value: "2017", label: "Ano de fundação" },
+  { value: "4", label: "Áreas principais" },
+  { value: "PME", label: "Estrutura jovem e ágil" },
 ];
 
 export const heroSlides = [
@@ -26,31 +47,25 @@ export const heroSlides = [
 export const aboutColumns = [
   {
     title: "A Nossa História",
-    content: (
-      <p>
+    paragraphs: [
+      <span key="p1">
         <span className="about-txt">
           <span className="about-txt-brand">Agostinho Emanuel</span> -
           Construção, Remodelação &amp; Reabilitação, Unipessoal Lda.
         </span>{" "}
         é uma jovem PME, fundada em 2017, com grande foco na excelência e na
-        satisfação do cliente. Desenvolvemos as nossas atividades de construção
-        de edifícios, bem como remodelação e reabilitação de edifícios
-        comerciais, industriais, públicos e residenciais. Somos uma empresa em
-        franco crescimento e em constante evolução e adaptação aos meios e
-        recursos modernos.
-      </p>
-    ),
+        satisfação do cliente.
+      </span>,
+      "Desenvolvemos as nossas atividades de construção de edifícios, bem como remodelação e reabilitação de edifícios comerciais, industriais, públicos e residenciais.",
+      "Somos uma empresa em franco crescimento e em constante evolução e adaptação aos meios e recursos modernos.",
+    ],
   },
   {
     title: "Os Nossos Valores",
-    content: (
-      <p>
-        Os nossos valores assentam numa base sólida de trabalho árduo em prol da
-        excelência, eficiência e satisfação plena do cliente. Somos uma equipa
-        jovem, qualificada e motivada, trabalhando em conjunto com os nossos
-        parceiros, primamos pelo rigor e qualidade no trabalho que executamos.
-      </p>
-    ),
+    paragraphs: [
+      "Os nossos valores assentam numa base sólida de trabalho árduo em prol da excelência, eficiência e satisfação plena do cliente.",
+      "Somos uma equipa jovem, qualificada e motivada, trabalhando em conjunto com os nossos parceiros, primamos pelo rigor e qualidade no trabalho que executamos.",
+    ],
   },
 ];
 
@@ -58,6 +73,8 @@ export const workSections = [
   {
     id: "workType1",
     title: "Edifícios Comerciais e Industriais",
+    description:
+      "Projetos orientados para desempenho técnico, imagem corporativa e durabilidade dos espaços.",
     cover: "/media/work-type-1/type1-01.JPG",
     images: [
       "/media/work-type-1/type1-02.JPG",
@@ -73,6 +90,8 @@ export const workSections = [
   {
     id: "workType2",
     title: "Edifícios e Espaços Públicos",
+    description:
+      "Intervenções em contexto público com atenção a uso intensivo, segurança e continuidade operacional.",
     cover: "/media/work-type-2/type2-01.jpeg",
     images: [
       "/media/work-type-2/type2-02.jpeg",
@@ -82,6 +101,8 @@ export const workSections = [
   {
     id: "workType3",
     title: "Edifícios Residenciais",
+    description:
+      "Execução e valorização de espaços habitacionais com detalhe construtivo e conforto no centro da decisão.",
     cover: "/media/work-type-3/type3-11.jpeg",
     images: [
       "/media/work-type-3/type3-21.jpg",
@@ -109,6 +130,8 @@ export const workSections = [
   {
     id: "workType4",
     title: "Reabilitação e Remodelação",
+    description:
+      "Atualização de edifícios existentes com soluções mais eficientes, funcionais e contemporâneas.",
     cover: "/media/work-type-4/type4-01.JPG",
     images: [
       "/media/work-type-4/type4-02.jpg",
@@ -162,3 +185,15 @@ export const contactItems = [
     ),
   },
 ];
+
+export const contactIntro = [
+  "Estamos ao seu dispor de segunda a sexta-feira, das 9h às 18h.",
+  "Fale connosco para pedidos de orçamento, esclarecimentos técnicos ou acompanhamento de obra.",
+];
+
+export const seoCopy = {
+  homeTitle: "AECRRU | Construção, Remodelação e Reabilitação",
+  aboutTitle: "Quem Somos | AECRRU",
+  workTitle: "Áreas de Intervenção | AECRRU",
+  contactsTitle: "Contactos | AECRRU",
+};
