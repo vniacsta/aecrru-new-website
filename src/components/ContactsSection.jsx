@@ -2,6 +2,8 @@ import "./ContactsSection.css";
 import { AddressCardIcon } from "./icons";
 
 function ContactsSection({ contactItems, intro }) {
+  const qrCodeSrc = `${import.meta.env.BASE_URL}media/qrcode.png`;
+
   return (
     <section className="contacts section-shell section-reveal">
       <div className="section-heading">
@@ -18,7 +20,7 @@ function ContactsSection({ contactItems, intro }) {
         <div className="contact-card">
           <AddressCardIcon />
           <img
-            src="/media/qrcode.png"
+            src={qrCodeSrc}
             alt="QR Code with vCard Info"
             className="qrcode"
           />

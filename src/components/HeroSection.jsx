@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { ChevronLeftIcon, ChevronRightIcon } from "./icons";
 
 function HeroSection({ slides, activeIndex, onSelect, onPrevious, onNext }) {
+  const logoSrc = `${import.meta.env.BASE_URL}media/logo-aecrru-shadow.png`;
+
   return (
     <section className="home-hero">
       <h1 className="sr-only">
@@ -38,10 +40,10 @@ function HeroSection({ slides, activeIndex, onSelect, onPrevious, onNext }) {
               aria-hidden={index !== activeIndex}
             >
               <img
-                src="/media/logo-aecrru-shadow.png"
+                src={logoSrc}
                 alt="Logo AECRRU"
                 className="main-logo"
-                />
+              />
               </div>
             ))}
           </div>

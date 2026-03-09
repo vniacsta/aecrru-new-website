@@ -3,6 +3,12 @@ import { pluginReact } from "@rsbuild/plugin-react";
 
 export default defineConfig({
   plugins: [pluginReact()],
+  server: {
+    base: "/aecrru-new-website/",
+  },
+  output: {
+    assetPrefix: "/aecrru-new-website/",
+  },
   html: {
     title:
       "AECRRU | Agostinho Emanuel Construção, Remodelação, Reabilitação, Unip. Lda.",

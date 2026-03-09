@@ -4,13 +4,15 @@ import { aboutColumns, companyMetrics } from "../data/siteData";
 import "./AboutPage.css";
 
 function AboutPage() {
+  const introMedia = `${import.meta.env.BASE_URL}media/work-type-3/type3-21.jpg`;
+
   return (
     <div className="about-page">
       <PageIntro
         eyebrow="Quem Somos"
         title="Uma empresa jovem com foco em execução rigorosa."
         text="A AECRRU atua em construção, remodelação e reabilitação com uma estrutura ágil, qualificada e orientada para a satisfação do cliente."
-        media="/media/work-type-3/type3-21.jpg"
+        media={introMedia}
       />
 
       <section className="section-shell about-page__metrics">

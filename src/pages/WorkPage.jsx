@@ -8,6 +8,7 @@ function WorkPage() {
   const [activeModal, setActiveModal] = useState(null);
   const [galleryIndex, setGalleryIndex] = useState(0);
   const activeGallery = workSections.find((section) => section.id === activeModal);
+  const introMedia = `${import.meta.env.BASE_URL}media/work-type-4/type4-05.jpg`;
 
   useEffect(() => {
     document.body.style.overflow = activeGallery ? "hidden" : "";
@@ -52,7 +53,7 @@ function WorkPage() {
         eyebrow="Áreas de Intervenção"
         title="Portefólio visual organizado por especialidade."
         text="Em vez de concentrar toda a navegação numa só página, cada frente de trabalho ganha mais contexto, leitura e foco visual."
-        media="/media/work-type-4/type4-05.jpg"
+        media={introMedia}
       />
 
       <WorkSection sections={workSections} onOpenGallery={setActiveModal} />
