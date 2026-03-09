@@ -1,3 +1,4 @@
+import "./HeroSection.css";
 import { ChevronLeftIcon, ChevronRightIcon } from "./icons";
 
 function HeroSection({ slides, activeIndex, onSelect, onPrevious, onNext }) {

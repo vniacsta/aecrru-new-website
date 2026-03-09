@@ -1,3 +1,4 @@
+import "./WorkSection.css";
 import { GalleryIcon } from "./icons";
 
 function WorkSection({ sections, onOpenGallery }) {

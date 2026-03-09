@@ -1,0 +1,14 @@
+.icon {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+  color: var(--brand-black);
+  opacity: 0.8;
+}
+
+.icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}

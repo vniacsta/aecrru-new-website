@@ -1,3 +1,4 @@
+import "./Header.css";
 import { FacebookIcon, InstagramIcon, MenuIcon } from "./icons";
 
 function Header({ menuOpen, onToggleMenu, onCloseMenu, navLinks }) {

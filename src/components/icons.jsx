@@ -1,3 +1,5 @@
+import "./icons.css";
+
 export function IconWrapper({ children }) {
   return (
     <span className="icon" aria-hidden="true">

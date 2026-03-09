@@ -1,3 +1,4 @@
+import "./ContactsSection.css";
 import { AddressCardIcon } from "./icons";
 
 function ContactsSection({ contactItems }) {

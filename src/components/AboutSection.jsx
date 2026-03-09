@@ -1,3 +1,5 @@
+import "./AboutSection.css";
+
 function AboutSection({ columns }) {
   return (
     <section className="about section-reveal" id="about">

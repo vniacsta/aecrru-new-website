@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@700&family=Open+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --brand-orange: #fc4f00;
+  --brand-white: #ffffff;
+  --brand-black: #000000;
+  --brand-grey: #bebdbd;
+  --shadow-soft: 0 18px 60px rgba(0, 0, 0, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background: var(--brand-white);
+  color: var(--brand-black);
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+.page-shell {
+  width: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.section-reveal {
+  animation: reveal-up 0.7s ease both;
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

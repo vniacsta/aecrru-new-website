@@ -1,3 +1,4 @@
+import "./GalleryModal.css";
 import { ChevronLeftIcon, ChevronRightIcon } from "./icons";
 
 function GalleryModal({ gallery, index, onClose, onPrevious, onNext, onSelect }) {

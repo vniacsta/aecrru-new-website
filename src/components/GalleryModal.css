@@ -1,0 +1,85 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.modal-card {
+  position: relative;
+  z-index: 1;
+  width: min(92vw, 1040px);
+  border-radius: 0 0 5px 5px;
+  background: var(--brand-grey);
+  box-shadow: var(--shadow-soft);
+}
+
+.modal-body {
+  position: relative;
+}
+
+.work-images {
+  display: block;
+  width: 100%;
+  height: min(70vh, 600px);
+  object-fit: cover;
+}
+
+.modal-arrow {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.modal-indicators {
+  position: static;
+  transform: none;
+  padding: 0.75rem 1rem 0;
+}
+
+.modal-indicators button {
+  border-color: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.modal-indicators button.active {
+  background: var(--brand-orange);
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 0.4rem;
+}
+
+.btn-back {
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: var(--brand-orange);
+  cursor: pointer;
+  transition: color 200ms ease-in-out;
+}
+
+.btn-back svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.btn-back:hover {
+  color: var(--brand-black);
+}
+
+@media (max-width: 600px) {
+  .work-images {
+    height: min(52vh, 300px);
+  }
+}

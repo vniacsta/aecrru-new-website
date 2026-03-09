@@ -1,0 +1,135 @@
+.home {
+  position: relative;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-slides {
+  position: relative;
+  min-height: 100vh;
+}
+
+.carousel-item {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  background-position: center;
+  background-size: cover;
+  transition: opacity 400ms ease-in-out;
+}
+
+.carousel-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0.1) 55%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.main-logo {
+  position: relative;
+  z-index: 1;
+  width: min(30vw, 420px);
+  animation: slide-bottom 1.5s cubic-bezier(0.15, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-bottom {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(90px);
+  }
+}
+
+.carousel-indicators {
+  position: absolute;
+  left: 50%;
+  bottom: 1.5rem;
+  z-index: 2;
+  display: flex;
+  gap: 0.5rem;
+  transform: translateX(-50%);
+}
+
+.carousel-indicators button {
+  width: 0.8rem;
+  height: 0.8rem;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.carousel-indicators button.active {
+  background: var(--brand-white);
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--brand-white);
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.carousel-control svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.carousel-control.prev {
+  left: 1rem;
+}
+
+.carousel-control.next {
+  right: 1rem;
+}
+
+@media (max-width: 768px) {
+  .carousel-slides {
+    min-height: 720px;
+  }
+
+  .main-logo {
+    width: min(52vw, 280px);
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-slides {
+    min-height: 600px;
+  }
+
+  .main-logo {
+    width: min(56vw, 230px);
+  }
+
+  .carousel-control {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+}
