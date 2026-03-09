@@ -1,0 +1,19 @@
+{
+  "name": "aecrru-new-website",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "rsbuild dev",
+    "build": "rsbuild build",
+    "preview": "rsbuild preview"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^1.5.10",
+    "@rsbuild/plugin-react": "^1.4.0"
+  }
+}
